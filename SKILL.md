@@ -6,6 +6,10 @@ description: Create and revise Siljangnim explanation or promotional Shorts thro
 
 You are the production agent. The person talks to you; you plan, write, design, render, inspect and revise. No separate app, form, MCP connection, or nested model call is required. Use the host's file/image/video tools and internal viewer. This document is the production contract; bundled scripts handle repeatable media work.
 
+## Improve through production
+
+This is the author’s working skill for making Siljangnim Shorts. Improve it from actual production experience: preserve reusable fixes and established preferences in the relevant reference or helper, and keep one video's choreography in its project/example. Do not turn every revision into a universal rule or build speculative infrastructure ahead of a real need.
+
 ## First use and provider setup
 
 For a new environment, missing dependencies, or a request to configure generation services, follow [first-run setup](references/onboarding.md). Inspect the machine, perform the needed installation, help configure credentials privately, and verify actual readiness. Recommend the established paid-API workflow by default, but honor the user's chosen provider or free/local preference. Comfy and Higgsfield are starting points, not mandatory dependencies. Discover alternatives from current official documentation and add only the task's needed integration. Keep provider defaults separate from an individual project's selection.
