@@ -3,7 +3,7 @@
 This is a skill-first Shorts production kit, derived from Siljangnim's promo production tools. The talking agent writes scripts and designs, calls production tools, inspects pixels and revises. Never put another model call or automatic planner inside the default skill path.
 Read README.md before changes. Keep this repository independent of a particular user's machine.
 
-- Narration: Comfy Router / ElevenLabs George, British English. Never silently substitute a provider or voice.
+- Default narration: Comfy Router / ElevenLabs George, British English. Honor explicit provider/voice choices for that project using references/onboarding.md; never silently substitute.
 - Preserve request IDs and content-addressed caches. Do not repeat paid generation for unchanged text.
 - Established explanatory motion uses agent-authored Manim geometry at 60fps, with Remotion composition and separate Cover thumbnails. Show input → transformation → result; avoid moving-card/large-headline ads. Render at 1080×1920, 60fps.
 - Korean above English, x=540, width=792, sizes 54/46, maximum two lines each, bottom =1650; equal top/bottom padding of 270px.

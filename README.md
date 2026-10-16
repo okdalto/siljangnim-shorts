@@ -24,16 +24,15 @@ git clone https://github.com/okdalto/siljangnim-shorts.git ~/.codex/skills/silja
 
 ## 제작 환경
 
-동봉한 도구를 쓸 때는 macOS/Linux, Python 3.12, uv, Node.js 22+, FFmpeg/ffprobe를 준비한 뒤 실행합니다.
+처음이라면 에이전트에게 이렇게 말하세요.
 
-```sh
-cd ~/.codex/skills/siljangnim-shorts
-./scripts/setup.sh
-```
+> “실장님 Shorts 처음 쓰는데 환경 점검부터 API 키 설정, Manim 설치까지 해 줘. 필요한 생성 서비스도 추천해 줘.”
 
-설명 모션은 Manim, 최종 합성은 Remotion을 사용합니다. Manim에는 Cairo/Pango와 `uv sync --project motion --locked`가 추가로 필요합니다.
+에이전트가 [초기 설정 안내](references/onboarding.md)에 따라 OS·도구를 점검하고 필요한 라이브러리를 설치한 뒤 실제 렌더를 확인합니다. `scripts/doctor.py`는 환경을 점검하고, `scripts/setup.sh`는 음성 정렬·Remotion·Manim 환경을 설치합니다. API 키는 채팅 대신 숨김 터미널 입력으로 저장할 수 있습니다.
 
-기본 음성은 Comfy Router의 ElevenLabs George입니다. `COMFY_API_KEY` 또는 `~/.config/siljangnim-shorts/comfy-token`으로 키를 제공하며 서비스 크레딧을 사용합니다. 같은 대사의 음성은 캐시를 재사용합니다. [명령·환경·저장 경로](references/production-tools.md)
+기본 음성 추천은 Comfy Router의 ElevenLabs George이며, 이미지 생성은 에이전트의 기존 도구 또는 Higgsfield 같은 유료 API를 추천합니다. 특정 서비스는 필수가 아닙니다. 원하는 서비스를 말하면 에이전트가 현재 공식 문서에서 연동 방법을 찾아 해당 작업에 연결합니다. 무료·로컬 솔루션도 선택할 수 있습니다. 외부 API는 이용 요금과 별도 계정 설정이 필요할 수 있습니다.
+
+기본 `./shorts speech`는 Comfy 경로입니다. 다른 서비스는 키 저장만으로 연결되지 않으며, 에이전트가 필요한 도구 연결 또는 작업별 어댑터를 준비합니다. [제작 명령·저장 경로](references/production-tools.md)
 
 ## 제작 기준과 전달 파일
 

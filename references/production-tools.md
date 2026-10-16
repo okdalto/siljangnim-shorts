@@ -21,6 +21,6 @@ George British English through Comfy is the current voice default. Preserve pitc
 
 ## Runtime and storage
 
-Run `scripts/setup.sh` when using bundled media helpers. They require macOS/Linux, Python 3.12, uv, Node.js 22+ and FFmpeg/ffprobe. Manim additionally needs Cairo/Pango and `uv sync --project motion --locked`.
+Run `scripts/setup.sh` when using bundled media helpers. They require macOS/Linux, Python 3.12, uv, Node.js 22+ and FFmpeg/ffprobe. The setup script includes locked Manim installation; Cairo/Pango system dependencies must be prepared first. For first-time setup or another provider, follow [onboarding](onboarding.md).
 
 Provide the Comfy key through `COMFY_API_KEY` or `~/.config/siljangnim-shorts/comfy-token`. Paid speech uses service credits. Store work in `agent-projects/` and caches in `.cache/`, both ignored by Git. `SHORTS_AGENT_DATA`, `SHORTS_CACHE_DIR` and `SHORTS_ALIGNMENT_PYTHON` override local paths.
