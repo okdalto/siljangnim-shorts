@@ -1,0 +1,7 @@
+{
+  "id": "resources",
+  "beats": [
+    {"en": "Burn electricity.", "ko": "전기를 소모하고,"},
+    {"en": "Waste cooling water.", "ko": "냉각수를 낭비하세요."}
+  ]
+}

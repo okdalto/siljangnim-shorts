@@ -1,0 +1,74 @@
+{
+  "title": "쇼츠에 당했나요? 복수하세요.",
+  "shots": [
+    {
+      "id": "flood",
+      "beats": [
+        {
+          "en": "Your feed is drowning in rubbish Shorts.",
+          "ko": "쓰레기처럼 범람하는 쇼츠."
+        },
+        {
+          "en": "Are you just going to sit there and take it?",
+          "ko": "계속 당하고만 있을 겁니까?"
+        }
+      ]
+    },
+    {
+      "id": "revenge",
+      "beats": [
+        {
+          "en": "Make your own. Get your revenge.",
+          "ko": "당신도 만들어서 복수하세요!"
+        },
+        {
+          "en": "With Siljangnim Shorts. Naturally.",
+          "ko": "실장님 Shorts로요. 물론이죠."
+        }
+      ]
+    },
+    {
+      "id": "production",
+      "beats": [
+        {
+          "en": "Give your agent a topic. The skill guides the script.",
+          "ko": "에이전트에게 주제를 주세요. 스킬을 따라 대본을 씁니다."
+        },
+        {
+          "en": "Then voice, captions, and moving explanations.",
+          "ko": "이어서 음성, 자막, 설명 모션을 만듭니다."
+        },
+        {
+          "en": "Review the video. Ask for changes.",
+          "ko": "영상을 보고, 대화로 수정을 요청하세요."
+        }
+      ]
+    },
+    {
+      "id": "edit",
+      "beats": [
+        {
+          "en": "It is a skill for your agent.",
+          "ko": "에이전트에 붙이는 제작 스킬입니다."
+        },
+        {
+          "en": "Keep creating in the same conversation. No separate app.",
+          "ko": "별도 앱 없이, 같은 대화에서 만들고 고칩니다."
+        }
+      ]
+    },
+    {
+      "id": "proof",
+      "beats": [
+        {
+          "en": "This advert was made using the same skill.",
+          "ko": "이 광고도 같은 스킬을 사용해 만들었습니다."
+        },
+        {
+          "en": "Fight the flood. By adding to it.",
+          "ko": "범람에 맞서세요. 더 범람시키면서."
+        }
+      ]
+    }
+  ]
+}

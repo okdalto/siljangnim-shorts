@@ -1,0 +1,23 @@
+import {bundle} from '@remotion/bundler';
+import {selectComposition,renderMedia,renderStill} from '@remotion/renderer';
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.dirname(fileURLToPath(import.meta.url));
+const folder=path.resolve(process.argv[2]),mode=process.argv[3];
+process.chdir(root);
+const plan=JSON.parse(fs.readFileSync(path.join(folder,'timeline.json'),'utf8'));
+const serveUrl=await bundle({entryPoint:path.join(root,'agent-root.tsx'),publicDir:path.join(folder,'public'),outDir:path.join(folder,'bundle'),
+ webpackOverride:config=>({...config,resolve:{...config.resolve,alias:{...config.resolve?.alias,'agent-design':path.join(folder,'design.tsx'),'agent-layout':path.join(root,'layout.tsx')},modules:[path.join(root,'node_modules'),'node_modules']}})});
+const options={serveUrl,inputProps:{plan},chromeMode:'chrome-for-testing',timeoutInMilliseconds:90000,...(process.env.SHORTS_CHROME?{browserExecutable:process.env.SHORTS_CHROME}:{})};
+const composition=await selectComposition({...options,id:'Film'});
+const cover=await selectComposition({...options,id:'Thumbnail'});
+await renderStill({...options,composition:cover,output:path.join(folder,'thumbnail.png')});
+fs.mkdirSync(path.join(folder,'stills'),{recursive:true});
+await renderStill({...options,inputProps:{plan,guides:true},composition:{...cover,props:{...cover.props,guides:true}},output:path.join(folder,'stills','thumbnail-guides.png')});
+let cursor=0;
+const defaults=plan.map(s=>{const frame=cursor+Math.floor(s.frames*.5);cursor+=s.frames;return frame});
+const frames=process.argv[4]?process.argv[4].split(',').map(Number):defaults;
+for(const frame of frames)await renderStill({...options,composition,frame,output:path.join(folder,'stills',`frame-${String(frame).padStart(5,'0')}.png`)});
+await renderStill({...options,inputProps:{plan,guides:true},composition:{...composition,props:{...composition.props,guides:true}},frame:frames[0]??0,output:path.join(folder,'stills','frame-guides.png')});
+if(mode==='render')await renderMedia({...options,composition,codec:'h264',crf:18,concurrency:2,disableSharedMemoryCapture:true,offthreadVideoThreads:1,offthreadVideoCacheSizeInBytes:128*1024*1024,outputLocation:path.join(folder,'film.mp4')});

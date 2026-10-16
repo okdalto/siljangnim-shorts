@@ -1,0 +1,17 @@
+.cache/
+.alignment/
+.venv/
+projects/
+**/node_modules/
+**/__pycache__/
+*.pyc
+.DS_Store
+.env
+.env.*
+!env.example
+motion/.venv/
+motion/media/
+remotion/.remotion/
+.remotion/
+
+agent-projects/

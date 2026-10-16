@@ -1,0 +1,8 @@
+[project]
+name = "siljangnim-shorts"
+version = "1.0.0"
+description = "Agent skill for narrated Shorts, custom motion design and thumbnails"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "Pillow==12.3.0",
+]
