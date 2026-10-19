@@ -28,3 +28,7 @@ Use Manim for native 60fps geometry and Remotion for final composition. `motion/
 For a 9×16 Manim frame, shared content bounds correspond to x=-3.3..3.3 and y=-5.75..5.75. Keep explanatory shapes above y=-3.2 to leave the bilingual caption band clear. Background #111214, warm white geometry and original brand red form the default palette. Retain recognizable object identity while transforming; show signals leaving real source positions, entering processes, and changing outputs on arrival. Labels do not replace these changes.
 
 `examples/revenge-morph/motion.py` demonstrates speech-aligned transformation, branching, waveform generation and dependency propagation. It is a specific promo design, not a universal renderer. The Cover remains independently composed.
+
+## Brand closing beats
+
+Use the two closing beats in `templates/brand.json`: “누구나 무료로 쓰는 오픈소스.” / “Free and open source, for everyone.”, then “크리에이티브 코딩 스튜디오, 실장님.” / “Your creative coding studio, Siljangnim.” Keep both languages aligned to the same speech beats and the brand name last.

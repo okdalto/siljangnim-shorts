@@ -4,14 +4,18 @@
   "eyebrow": "당신의 다음 리믹스는?",
   "title": "siljangnim",
   "tagline": "말로 만들고, 섞고, 바꾸세요.",
-  "narration": "Create with words and remix freely. Your creative coding studio, Siljangnim.",
+  "narration": "Create with words and remix freely. Free and open source, for everyone. Your creative coding studio, Siljangnim.",
   "url": "github.com/okdalto/siljangnim",
   "min_seconds": 5,
-  "subtitle_ko": "말로 만들고 자유롭게 섞으세요. 크리에이티브 코딩 스튜디오, 실장님.",
+  "subtitle_ko": "말로 만들고 자유롭게 섞으세요. 누구나 무료로 쓰는 오픈소스. 크리에이티브 코딩 스튜디오, 실장님.",
   "caption_groups": [
     {
       "ko": "말로 만들고 자유롭게 섞으세요.",
       "en": "Create with words and remix freely."
+    },
+    {
+      "ko": "누구나 무료로 쓰는 오픈소스.",
+      "en": "Free and open source, for everyone."
     },
     {
       "ko": "크리에이티브 코딩 스튜디오, 실장님.",

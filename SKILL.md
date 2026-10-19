@@ -57,3 +57,12 @@ For chat review, show a playable preview. For Google Drive final delivery, uploa
 - `<topic>_caption_KO_EN.txt`: one UTF-8 file containing Korean post copy, then English post copy, then at most five shared, deduplicated hashtags. Arrange the body continuously for one-step copy and paste.
 
 Read [Drive delivery](docs/DRIVE_DELIVERY.md) when uploading an approved final video. Publishing is separate and needs user authorization. Keep keys, private assets and output/cache folders out of Git. On failure, fix the reported cause and resume; do not loop paid generation. Only execute task-specific code you authored or reviewed; the local renderer is not an OS sandbox.
+
+## Shared Siljangnim ending
+
+Use the exact closing copy from `templates/brand.json` in Siljangnim promotional Shorts:
+
+- Korean: “누구나 무료로 쓰는 오픈소스. 크리에이티브 코딩 스튜디오, 실장님.”
+- English: “Free and open source, for everyone. Your creative coding studio, Siljangnim.”
+
+Show these as two speech-aligned bilingual beats: free/open-source access, then studio identity and the final brand name. Keep the original logo unchanged. Preceding episode-specific calls to action or published-project download information may remain. Do not imply that external model/API services are free. New productions use this ending; existing rendered videos change only when requested.

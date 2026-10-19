@@ -16,3 +16,5 @@ Read README.md before changes. Keep this repository independent of a particular 
 - Run `uv run --locked python -m unittest discover -s tests -v`. For visual changes render, inspect frames, and play the output.
 - Keys, machine addresses, prompts from private projects, caches and finished work stay outside Git.
 - Don't claim automatic tests validate creative quality or pronunciation. Record manual review separately.
+
+- Shared ending copy and bilingual beat order are fixed in SKILL.md and templates/brand.json: free/open-source access, then studio identity and Siljangnim last.
