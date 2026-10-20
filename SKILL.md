@@ -24,6 +24,8 @@ Read the request and existing project before deciding what to change. Present a 
 
 Design a separate thumbnail with a clear focal point and a short readable hook. Do not choose an arbitrary video frame. Avoid repeating a stage list for every shot or covering weak visuals with decorative cards. Real footage and explanatory graphics must remain distinguishable.
 
+For simulation, optimization, or other experimental explainers, follow [experiment to Short](references/experiment-to-short.md). Verify the requested input before treating a different successful example as the answer. Preserve actual intermediate results, distinguish geometry from dynamics, and keep checks of media, visual playback, and audio listening separate.
+
 For revisions, identify whether the problem is the idea, script, composition, movement, timing or voice. Change the relevant source; do not regenerate unchanged speech or replace the visual concept with a different colour alone.
 
 ## Visual contract

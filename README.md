@@ -8,6 +8,8 @@
 
 실제 쇼츠를 한 편씩 만들면서 제작 방식을 계속 다듬습니다. 반복해서 필요한 기준과 작업은 스킬과 보조 도구에 반영하고, 특정 영상의 연출과 수정은 그 영상의 소스에 남깁니다. [SKILL.md](SKILL.md)는 그 과정에서 쌓이는 제작 규약입니다.
 
+실험 영상은 [실험에서 쇼츠까지](references/experiment-to-short.md)의 흐름으로 만듭니다. 실제 계산 기록을 보존하고, 발화에 맞춰 과정을 보여 준 뒤, 별도 썸네일과 로컬 미리보기까지 검수합니다. [에피소드 검수 양식](templates/experiment-review.md)은 자동 검사와 직접 보고 들은 검수를 구분합니다.
+
 [이 스킬로 만든 홍보 영상·썸네일](https://github.com/okdalto/siljangnim-shorts/releases/tag/v1.0.0) · [홍보 예제 설명](docs/PROMO.md)
 
 ## 설치와 사용
