@@ -26,6 +26,14 @@ Design a separate thumbnail with a clear focal point and a short readable hook. 
 
 For revisions, identify whether the problem is the idea, script, composition, movement, timing or voice. Change the relevant source; do not regenerate unchanged speech or replace the visual concept with a different colour alone.
 
+## Thumbnail references — required
+
+Before creating, revising or finalizing any thumbnail, locate and visually inspect an existing user-approved Siljangnim thumbnail and read its available template/prompt. Search the current project, the user's existing thumbnail assets and accessible prior delivery folders; a newly generated, unapproved draft is not an approved reference. Do not infer the series style from the video palette, logo or a written description alone.
+
+Match the reference's composition, typography hierarchy, illustration treatment, ingredient/result layout and spacing, adapting the subject and headline to this episode. Pass the inspected reference image to the image-generation tool when using one. Record the reference image and template used in the episode's production notes, then compare the result with that reference before delivery.
+
+If no approved reference image can be found or opened, ask the user for an existing thumbnail or its location and wait before producing the thumbnail. If conflicting references leave the intended style unclear, ask which one to follow. Do not silently invent a replacement style; continue independent video or caption work while awaiting the reference. Follow an explicit user request for a new style when provided.
+
 ## Visual contract
 
 - Portrait 1080×1920, 60fps. **Equal vertical padding: 270px at the top and 270px at the bottom.** This supersedes the older asymmetric 270/420 convention.
