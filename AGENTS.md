@@ -6,7 +6,7 @@ Read README.md before changes. Keep this repository independent of a particular 
 - Default narration: Comfy Router / ElevenLabs George, British English. Honor explicit provider/voice choices for that project using references/onboarding.md; never silently substitute.
 - Preserve request IDs and content-addressed caches. Do not repeat paid generation for unchanged text.
 - Established explanatory motion uses agent-authored Manim geometry at 60fps, with Remotion composition and separate Cover thumbnails. Show input → transformation → result; avoid moving-card/large-headline ads. Render at 1080×1920, 60fps.
-- Korean above English, x=540, width=792, sizes 54/46, maximum two lines each, bottom =1650; equal top/bottom padding of 270px.
+- Korean above English, x=540, width=792, sizes 54/46, maximum two lines each, caption bottom =1550; reserve graphics above y1260 with at least 32px clearance. Balance graphics and captions as one composition; preserve internal spacing when shifting them together. Thumbnail composition remains separate.
 - Align captions to actual speech. Estimated timings are only allowed in explicitly labelled silent drafts.
 - English voice is sped up 1.05x with pitch preserved; align after this processing.
 - Original Siljangnim logo and shared bilingual brand ending must remain intact.

@@ -36,9 +36,11 @@ If no approved reference image can be found or opened, ask the user for an exist
 
 ## Visual contract
 
-- Portrait 1080×1920, 60fps. **Equal vertical padding: 270px at the top and 270px at the bottom.** This supersedes the older asymmetric 270/420 convention.
-- The shared layout is `remotion/layout.tsx`: content y=270..1650, x=144..936. Use it for both video and thumbnail. Backgrounds may bleed; important text and objects stay inside.
-- Korean above English, horizontally centred at x540, width792, 54/46px, at most two lines each. Anchor the caption block's bottom to y1650 so line count does not change the outer bottom padding.
+- Portrait 1080×1920, 60fps. Keep the visual composition's top/bottom reference padding symmetric at 270px; **caption safety is a separate, higher-priority region for video**.
+- `remotion/layout.tsx` separates `CONTENT` (composition/thumbnail bounds), `CAPTIONS` (video subtitle bounds), and `GRAPHICS` (motion viewport). Never use `CONTENT.bottom` as the subtitle anchor.
+- Korean above English, centred at x540, width792, 54/46px, at most two lines each. For the shared Shorts/Reels video, anchor the entire caption block's bottom at **y1550**, reserving 370px below for platform UI. This is the user-approved organic-post compromise, not an official safe-zone guarantee. For paid ads or conservative cross-placement delivery, use y1240 and graphics ending by y950 instead. Check organic posts against the actual app UI; do not automatically impose ad margins.
+- Reserve the maximum four-line caption height (258px with current typography) even on shorter captions, plus at least 32px separation: graphics end at y1260 and captions start no higher than y1292. Reframe/rescale graphics without distorting roads or changing motion timing. Keep the graphic viewport stable across caption changes. Fit brand-ending text/logo above captions too. Backgrounds can bleed; the separate thumbnail retains its approved template.
+- Balance the rendered scene and captions as one composition. Use the approved v45 placement as the organic-post reference: graphics approximately y292..1260, caption bottom y1550. When adjusting overall vertical placement, translate graphics and captions together and preserve their internal spacing; avoid excessive empty space below the complete composition. Keep the approved thumbnail separate.
 - Keep subtitles and the original logo stable. Use purposeful acceleration, short overshoot and settling for objects. Tie meaningful events to measured speech cues.
 - Reuse `assets/logo.svg` unchanged for the brand ending. Do not fabricate execution footage or metrics.
 
@@ -60,7 +62,7 @@ Do not use middle dots (`·`, `ㆍ`, `・`) as separators in post copy. Use natu
 
 ## Inspect and deliver
 
-Inspect the cover at phone size, key poses and before/after frames. Check **equal top/bottom padding**, overlap, line breaks and motion tied to speech. If it is dull or crowded, revise the design and render again. Code success is not creative approval.
+Inspect the cover at phone size, key poses and before/after frames. Check visual balance separately from **video caption safety (bottom ≤1550), maximum-line clearance, platform UI overlap**, line breaks and motion tied to speech. Inspect the original and phone-size frames; do not shrink captions just to fit graphics. If it is dull or crowded, revise the design and render again. Code success is not creative approval.
 
 Watch the continuous video with the host's internal viewer; `./shorts view` is an optional local read-only fallback. Record actual findings using `./shorts review ID --revision N --notes 'What was inspected and what remains' --pass-visual`. Distinguish full decoding, visual playback and actual audio listening. Do not claim one proves another.
 
