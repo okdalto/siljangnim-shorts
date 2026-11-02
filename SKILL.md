@@ -62,6 +62,10 @@ Apply these preferences to both Korean and English post bodies in the combined c
 
 Do not use middle dots (`·`, `ㆍ`, `・`) as separators in post copy. Use natural conjunctions, commas or separate sentences instead; for example, write “출발 시간과 이동 계획” instead of “출발·이동 계획”. Review both language versions for these patterns before saving the delivery TXT.
 
+## Frame-accurate editing
+
+Before compositing patches, retiming or exporting, follow [frame composition and 60fps verification](references/frame-compositing.md). Assemble native frames by integer frame index, keep narration captions independent of graphics blends, and verify actual motion cadence against source frames as well as the nominal frame rate. Preserve a lossless master and approved audio between revisions.
+
 ## Inspect and deliver
 
 Inspect the cover at phone size, key poses and before/after frames. Check visual balance separately from **video caption safety (bottom ≤1550), maximum-line clearance, platform UI overlap**, line breaks and motion tied to speech. Inspect the original and phone-size frames; do not shrink captions just to fit graphics. If it is dull or crowded, revise the design and render again. Code success is not creative approval.
