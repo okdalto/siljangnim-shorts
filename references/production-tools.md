@@ -14,6 +14,15 @@ Run commands from this skill's directory (the repository root). The `shorts` hel
 
 Use the actual revision returned by the previous command. `script.json` is `{title,shots:[{id,beats:[{en,ko}]}]}`. `speech` returns real alignment cues in the project state. Commands return JSON; long renders can run as a host background shell task. Do not start a duplicate job while one is running.
 
+For an authored output, check stream properties, aligned cue bounds and full decoding without regenerating anything:
+
+```sh
+uv run --locked python -m shorts_app.check_render /absolute/final.mp4 \
+  --timeline /absolute/timeline.json --output /absolute/render-check.json
+```
+
+The timeline is the existing array of `{id, frames, captions}` shots. The checker expects 1080×1920/60fps with audio; a preview can override `--width 720 --height 1280 --fps 30` when its timeline uses the same frame rate, or omit the timeline for a transcoded preview. `--allow-silent` is only for a deliberately silent draft. The report records a SHA-256 and does not mark visual quality, physics or pronunciation as approved. Use the [experimental production workflow](experiment-to-short.md) and [review template](../templates/experiment-review.md) for those checks.
+
 `preview` returns paths for a separate thumbnail, representative frames and padding-guide images. Open the actual images with the host's image viewer. For event inspection, pass explicit global frame indices: `./shorts preview ID --frames 30 60 90`. For assets, use `./shorts asset ID --revision N --file /absolute/media.mp4` and the returned static filename.
 
 George British English through Comfy is the current voice default. Preserve pitch at 1.05x, align actual speech, cache paid requests, and never silently replace the provider. A different provider or language is possible when the person requests it; update the production contract accordingly. Design-only edits preserve speech. Script edits rebuild cues while reusing unchanged scene audio.
