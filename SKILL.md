@@ -56,11 +56,19 @@ Read [the design contract](references/design-contract.md) when writing the compo
 
 Read [production tools](references/production-tools.md) when preparing speech, importing media or rendering with the bundled helpers. Use returned revisions and measured speech cues; preserve cached audio for unchanged text. George British English through Comfy, pitch-preserving 1.05x speed, is the default. Never silently substitute the provider or voice.
 
+## Speech rhythm
+
+Before editing narration pauses or regenerating unclear words, follow [speech timing](references/speech-timing.md). Combine actual waveform/spectral evidence with forced alignment, protect word attacks and endings, and preserve intentional user-requested holds. Ordinary explanation gaps should feel consistent; timestamps alone must not choose cuts.
+
 ## Social post copy
 
 Apply these preferences to both Korean and English post bodies in the combined caption TXT. Write direct, natural prose about what was tried and what happened. Do not add unnecessary defensive caveats or boilerplate disclaimers, such as a list of every experimental limitation or a generic “not a universal ranking” sentence. Keep claims accurately scoped in the main sentence (for example, “in this experiment”) rather than appending a defensive paragraph; retain a qualification only when omitting it would materially mislead the reader.
 
 Do not use middle dots (`·`, `ㆍ`, `・`) as separators in post copy. Use natural conjunctions, commas or separate sentences instead; for example, write “출발 시간과 이동 계획” instead of “출발·이동 계획”. Review both language versions for these patterns before saving the delivery TXT.
+
+## Continuous motion revisions
+
+When a revision changes narration timing, shot length or the sequence of an explanation, revise the source choreography and render it again on the complete new timeline. Preserve the identity, position, scale, colour and velocity of objects across explanation beats. Plan how the outgoing scene physically becomes the incoming scene before rendering. Do not append old rendered clips, reset a local animation clock or use clip crossfades/blends to conceal incompatible motion. Reuse unchanged assets and cached speech, but rebuild the affected continuous motion from source; for a broad continuity revision, render the whole explanation as one continuous source. Review boundary motion at normal speed, not only isolated stills. See [frame composition](references/frame-compositing.md) for the distinction between source rerendering and a narrowly scoped patch.
 
 ## Frame-accurate editing
 

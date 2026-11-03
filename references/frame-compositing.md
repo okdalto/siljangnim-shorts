@@ -2,6 +2,14 @@
 
 Read this before patching, retiming, compositing or exporting an existing video. A 60fps container can still repeat frames while skipping source motion. During Diffusion production, native motion updated every frame but timestamp-offset patch overlays introduced a recurring three-frame cadence. Restoring the native frames fixed the motion without changing narration or duration.
 
+## Rerender choreography when timing or continuity changes
+
+The default for changed scene durations, revised narration or a disconnected explanatory sequence is a fresh source render on the revised full timeline. Keep a persistent scene state: the object that leaves one explanation is the object that enters the next. Match endpoint positions, shape, colour, scale and velocity; include camera motion in the same timing plan. A speech pause may leave the motion running. Recalculate all downstream frame ranges after timing changes.
+
+Do not join previously rendered fragments and blend between them as a substitute for designing the transition. Whole-frame blending cannot fix a reset particle, a mismatched camera, an unfinished transformation or an animation that restarts at the next sentence. Object-level fading can be intentional choreography; it must not conceal mismatched clips or fade narration captions.
+
+The patch mechanics below are for narrow corrections that leave the surrounding choreography and timing intact, or for an explicitly requested edit. They are not the default for rebuilding a video. For a full continuity revision, render the explanation as one continuous native-frame source, then add speech and captions independently. Verify the final output against that new source and watch every scene boundary.
+
 ## Assemble by frame number
 
 - Keep an immutable lossless editing master (for example FFV1 video with PCM audio). Use original renders and cached narration as sources. Export the delivery H.264/AAC once from the new master; never use successive delivery MP4s as editing masters. Lossless storage prevents further degradation but cannot restore already-lost detail.
